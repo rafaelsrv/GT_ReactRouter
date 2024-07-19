@@ -5,7 +5,7 @@ import Component3 from "../components/Component3"
 import Home from "../components/Home"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
-import Notfound from "../components/About"
+import Notfound from "../components/Notfound"
 
 const Paths = () => {
     return(
