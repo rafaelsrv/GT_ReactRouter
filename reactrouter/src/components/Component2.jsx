@@ -1,7 +1,28 @@
 import { Link } from "react-router-dom"
+import Loading from "./Loading"
+import React, { lazy, Suspense, useState, useEffect } from 'react';
 
-function Component2() {
+
+const Component2 = () => {
+  const [isTimedOut, setIsTimedOut] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsTimedOut(true);
+    }, 1000); // Set timeout for 5 seconds
+
+    return () => clearTimeout(timer);
+  }, []);
+
+
+  
  return(
+  <>
+
+{!isTimedOut ? (
+        <Loading/>
+      ) : (
+  <Suspense fallback={<Loading/>}>
   
   <div className='bg-black w-screen flex flex-col items-center justify-center text-3xl '>
   <h1 className="italic text-gray-700 " >Página 2</h1>
@@ -16,6 +37,9 @@ function Component2() {
   
   </div>
   
+  </Suspense>
+  )}
+  </>
   
   )
  

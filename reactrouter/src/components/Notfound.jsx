@@ -25,7 +25,7 @@ const Notfound = () => {
   <Suspense fallback={<Loading/>}>
   
   <div className='bg-black w-screen flex flex-col items-center justify-center text-3xl '>
-  <h1 className="italic text-gray-700 " >Página não encontrada</h1>
+  <h1 className="italic text-gray-700 " >Página 1</h1>
 
   <div className="text-white">Páginas</div>
   <div className="text-white flex py-4 gap-5">

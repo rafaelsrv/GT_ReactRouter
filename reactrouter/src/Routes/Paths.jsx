@@ -5,6 +5,8 @@ import Component3 from "../components/Component3"
 import Home from "../components/Home"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import Notfound from "../components/About"
+
 const Paths = () => {
     return(
         <>
@@ -15,6 +17,7 @@ const Paths = () => {
                     <Routes>
                         <Route path='/' element={<Home/>}/>
                         <Route path='/Component1' element={<Component1/>}/>
+                        <Route path='*' element={<Notfound/>}/>
                         <Route path='/Component2' element={<Component2/>}/>
                         <Route path='/Component3' element={<Component3/>}/>
                     </Routes>
